@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Navigation from "./Components/Navigation"
+import Home from "./Components/Home/Home"
+import Cooking from "./Components/Cooking"
+import Footer from "./Components/Footer"
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+
 
 function App() {
+  const userId = localStorage.getItem("userId");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navigation/>
+    <BrowserRouter>
+      <Switch>
+      <Route path="/Cooking" component={Cooking}>
+      </Route>
+        <Route path="/" component={Home}>
+        </Route>
+      </Switch>
+    </BrowserRouter>
+    <Footer/>
+   
     </div>
   );
 }

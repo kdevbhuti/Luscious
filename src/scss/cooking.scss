@@ -1,0 +1,59 @@
+@import "./theam.scss";
+
+main {
+  .cookHeading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10rem;
+    padding: 0rem;
+    background-color: var(--skyBlueBackground);
+    margin-bottom: 1rem;
+    h1 {
+      padding-left: 3rem;
+    }
+  }
+  .recipeDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    .imageContent {
+      grid-area: 1/2 / span 1 / span 1;
+      justify-self: flex-end;
+      .recipeImg {
+        height: 20rem;
+        width: 20rem;
+      }
+    }
+    .recipeIngredians {
+      grid-template-rows: 1/1 / span 1 / span 1;
+    }
+    .recipeMethod {
+      grid-area: 2/1 / span 1 / span 2;
+    }
+    .recipeVideo {
+      grid-area: 3/ 1 / span 1 / span 1;
+      iframe {
+        width: 30rem;
+        height: 20rem;
+      }
+    }
+    .userComments {
+      grid-area: 3/ 2 / span 1 / span 1;
+      .commentContainer {
+        ul {
+          height: 15rem;
+          overflow-y: auto;
+        }
+      }
+      .submitComment {
+        input[type="text"] {
+          border: none;
+          border-bottom: 3px solid var(--button-color);
+          width: 20rem;
+        }
+      }
+    }
+  }
+}

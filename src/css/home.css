@@ -1,0 +1,217 @@
+@import "../css/variables.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans";
+  color: var(--deep_blue);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  margin: 0rem 0rem 1rem 0rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  margin: 0rem 0rem 0.5rem 0rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  margin: 0rem 0rem 0.5rem 0rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  margin: 0rem 0rem 0.5rem 0rem;
+}
+
+h5 {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  margin: 0rem 0rem 0.5rem 0rem;
+}
+
+nav {
+  padding: 1rem 3rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-family: "Rubik", sans-serif;
+  color: var(--deep_blue);
+  line-height: 1.2rem;
+  word-spacing: 1px;
+  margin: 0rem 0rem 0.5rem 0rem;
+}
+
+button {
+  background-color: var(--deep_blue);
+  color: var(--white);
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+}
+
+input[type=file] {
+  margin-bottom: 0.5rem;
+}
+
+input[type=text],
+[type=email] {
+  width: 10rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--gray-border);
+  margin-bottom: 0.5rem;
+  outline: none;
+  font-family: "Roboto";
+  color: var(--deep_blue);
+}
+
+span {
+  font-family: "Roboto";
+  font-size: 1rem;
+}
+
+figure {
+  margin: 0rem;
+}
+figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-family: "Rubik", sans-serif;
+}
+
+ul {
+  padding: 0rem;
+  margin: 0rem;
+}
+ul li {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.2rem;
+  word-spacing: 0.7px;
+  letter-spacing: 0.5px;
+  color: var(--deep_blue);
+  list-style: none;
+  font-family: "Rubik", sans-serif;
+}
+
+section {
+  padding: 0rem 3rem;
+}
+
+main .header {
+  position: relative;
+  padding: 0rem;
+  margin-bottom: 1rem;
+}
+main .header .headerImg {
+  height: 20rem;
+}
+main .header .blueOpacity {
+  position: absolute;
+  top: 0;
+  background-color: var(--skyBlueBackground);
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+main .header .headDiv {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0rem;
+  padding: 0rem 3rem;
+  z-index: 20;
+}
+main .header .headDiv .searchSection .searchBox {
+  width: 30rem;
+}
+main .header .headDiv .searchSection .searchBtn {
+  padding: 0.7rem 2rem;
+}
+main .header .headDiv .selectBox {
+  background-color: var(--white);
+  height: 5rem;
+}
+main .recipes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 1rem;
+}
+main .recipes .recipeContent {
+  display: grid;
+  grid-template-columns: 1fr 15rem;
+  grid-template-rows: 2rem auto 4rem 2rem;
+  padding-left: 1rem;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--button-color);
+}
+main .recipes .recipeContent .recipeName {
+  grid-area: 1/1/span 1/span 1;
+  color: var(--blue_bold_text);
+  margin: 0rem 0rem 0rem -1rem;
+}
+main .recipes .recipeContent .recipeName .dash {
+  letter-spacing: -0.1rem;
+}
+main .recipes .recipeContent .description {
+  grid-area: 2/1/span 1/span 1;
+}
+main .recipes .recipeContent .comments {
+  grid-area: 3/1/span 1/span 1;
+  overflow: hidden;
+}
+main .recipes .recipeContent .comments .commentList {
+  height: 4rem;
+  overflow-y: scroll;
+}
+main .recipes .recipeContent .comments .commentHeading {
+  color: var(--blue_bold_text);
+}
+main .recipes .recipeContent .snapShort {
+  height: 15rem;
+  width: 100%;
+  grid-area: 1/2/span 3/span 1;
+}
+main .recipes .recipeContent .viewRecipe {
+  margin-bottom: 0rem;
+  grid-area: 4/2/span 1/span 1;
+  align-self: center;
+  justify-self: center;
+  background-color: var(--button-color);
+  color: var(--white);
+  width: 100%;
+}
+
+/*# sourceMappingURL=home.css.map */

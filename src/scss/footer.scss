@@ -1,0 +1,28 @@
+footer {
+  border-top: 2px solid var(--gray-border);
+  border-bottom: 0.3rem solid var(--skyBlueBackground);
+  .footer_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    .footer_logoes {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        height: 5rem;
+        width: 10rem;
+      }
+      .socialIcon {
+        display: inline-flex;
+        color: var(--button-color);
+        gap: 1rem;
+      }
+    }
+    .copyright {
+      font-weight: bold;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+}
