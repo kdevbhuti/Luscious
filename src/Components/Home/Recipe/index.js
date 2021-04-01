@@ -14,9 +14,9 @@ const Recipe = ({recipe = {}})=>{
     }
 
     return(
-        <div className="recipeContent">
+        <div data-testid="recipe" className="recipeContent">
             <h2 className="recipeName"><span className="dash">&mdash;&mdash;&emsp;</span>{recipe.recipeName}</h2>
-            <p className="description">
+            <p data-testid="view-description-of-recipe" className="description">
             {recipe.description}
             </p>
             
@@ -30,7 +30,7 @@ const Recipe = ({recipe = {}})=>{
             <figure className="snapShort">
                 <img src={recipe.snapshort}></img>
             </figure>
-        <button className="viewRecipe" onClick={buttonClickHandeler}>View Recipe</button>
+        <button data-testid="view-recipe-button" className="viewRecipe" onClick={buttonClickHandeler}>View Recipe</button>
         </div>
     )
 }

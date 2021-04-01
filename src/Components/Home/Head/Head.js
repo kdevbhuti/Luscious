@@ -27,7 +27,7 @@ const Head = ({allRecipeName = [], searchRecipe = ()=>{}}) => {
     }
 
     return(
-        <div>
+        <div data-testid="header">
             <figure className="headerImg">
                 <img src={HeadImage}></img>
             </figure>
@@ -35,8 +35,9 @@ const Head = ({allRecipeName = [], searchRecipe = ()=>{}}) => {
                 <div className="headDiv">
                     <h1>Find Recipes</h1>
                     <div className="searchSection">
-                    <input onChange={handleChange} className="searchBox" placeholder="Enter Recipe" type="text" value={searchValue}></input>
+                    <input data-testid="search-box" onChange={handleChange} className="searchBox" placeholder="Enter Recipe" type="text" value={searchValue}></input>
                     <button onClick={searchRecipeValue} className="searchBtn">Search</button>
+                    <p>Want to craft your own creative meat-free meals? Get inspiration from other food lovers!</p>
                 </div>
                 <div className="selectBox">
                     <ul>
